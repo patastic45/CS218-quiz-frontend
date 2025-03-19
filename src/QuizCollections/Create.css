@@ -1,0 +1,123 @@
+/* General Page Styling */
+
+  
+  /* Form Container */
+  .quiz-collection-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Title */
+  .quiz-collection-form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .input-field {
+    width: 95%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  
+  /* Form Group */
+  .form-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  /* Labels */
+  .form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Styled Select Boxes */
+  .styled-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    height: 120px;
+    overflow-y: auto;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    width: 100%;
+    font-size: 18px;
+    background-color: #2979ff;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2962ff;
+  }
+
+  .quiz-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .true-false-section,
+  .multi-choice-section {
+    background: #f5f7fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+  }
+  
+  .quiz-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .quiz-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+  }
+  
+  .quiz-box ul {
+    padding-left: 20px;
+  }
+  
+  .loading-text,
+  .error-text {
+    text-align: center;
+    font-size: 18px;
+    color: #ff4d4d;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .quiz-collection-form {
+      max-width: 90%;
+    }
+  }
+  

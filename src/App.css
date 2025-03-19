@@ -1,0 +1,233 @@
+/* General App Styling */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* ========================= */
+/*       GRID LAYOUT         */
+/* ========================= */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e5e7eb;
+  padding: 32px;
+}
+
+/* Page Title */
+.app-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+/* Individual Collection Box */
+.grid-box {
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.grid-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Collection Title */
+.grid-box h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+/* Sections */
+.question-section, .shared-section {
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+}
+
+/* List Styling */
+.question-list, .shared-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.question-list li, .shared-list li {
+  padding: 6px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+/* Loading & Error Text */
+.loading-text, .error-text {
+  text-align: center;
+  font-size: 18px;
+  color: #ef4444;
+}
+
+/* No Collections Text */
+.no-collections {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #6b7280;
+}
+
+/* ========================= */
+/*        BUTTONS            */
+/* ========================= */
+
+.grid-box a,
+.grid-box button {
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.grid-box a:hover,
+.grid-box button:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* ========================= */
+/*       LOGIN PAGE          */
+/* ========================= */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.login-form button:hover {
+  background-color: #2563eb;
+}
+
+.login-form a {
+  display: block;
+  margin-top: 12px;
+  color: #3b82f6;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/* ========================= */
+/*      RESPONSIVENESS       */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .grid-box {
+    padding: 20px;
+  }
+
+  .login-form {
+    padding: 30px;
+  }
+}
