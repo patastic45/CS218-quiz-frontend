@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://31em60xrtf.execute-api.us-west-1.amazonaws.com/dev/route";
 
 const getAccessToken = () => localStorage.getItem("access_token");
 const getRefreshToken = () => localStorage.getItem("refresh_token");
@@ -33,7 +33,7 @@ export const logoutUser = async () => {
     const refreshToken = localStorage.getItem("refresh_token");
   
     if (refreshToken) {
-      await fetch("http://127.0.0.1:8000/api/logout/", {
+      await fetch(`${API_BASE_URL}/api/logout/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ refresh_token: refreshToken }),
